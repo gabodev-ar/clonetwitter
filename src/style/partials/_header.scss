@@ -1,0 +1,126 @@
+@use 'mixinfunc';
+@use 'global';
+
+.header {
+    min-height: 100vh;
+    width: mixinfunc.rem(317);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    background-color: $color-background;
+    border-right: 1px solid $color-grey;
+    font-family: 'Chirp', sans-serif;
+    font-size: 1.28em;
+
+    &__wrapper {
+        min-height: 100vh;
+        width: mixinfunc.rem(275);
+        padding: 0 .5em 0 .5em;
+        margin-top: .2em;
+    }
+
+    &__logo {
+        width: mixinfunc.rem(52);
+        height: mixinfunc.rem(52);
+        display: flex;
+        padding: .55em;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &__logo:hover {
+        background-color: $color-hover-sec;
+    }
+
+    &__icon {
+        fill: $color-primary;
+    }
+}
+
+.nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__ul{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    &__li{
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 1.5em;
+        padding: mixinfunc.rem(12);
+        padding-right: 1.3em;
+    }
+
+    &__li:hover{
+        background-color: $color-hover-pry;
+    }
+
+    &__icon{
+        width: 1.3em;
+        height: 1.3em;
+        margin-right: 1em;
+    }
+
+    &__label{
+        display: inline;
+        margin: 0;
+        color: $color-font-pry;
+    }
+
+    &__label--active{
+        font-weight: 700;
+        color: $color-font-sec;
+    }
+    
+}
+
+.twittear{
+    width: max-content;
+    font-size: .85em;
+    background-color: $color-primary;
+    margin-top: .5em;
+    border-radius: 1.5em;
+    
+    &__a{
+        display: flex;
+        justify-content: center;
+        padding: .89em 4.3em;
+        *border: 1px solid red;
+    }
+
+    &__label{
+        color: #FFFFFF;
+        font-weight: 800;
+    }
+}
+
+.twittear:hover{
+    background-color: $color-hover-btn;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+
+.cajas {
+    width: 10em;
+    height: 10em;
+    background-color: red;
+    margin-bottom: 1em;
+}
