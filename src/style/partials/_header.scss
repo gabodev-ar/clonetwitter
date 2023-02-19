@@ -108,6 +108,53 @@
     background-color: $color-hover-btn;
 }
 
+.profile{
+    width: 100%;
+    margin-top: 1.3em;
+    border-radius: 1.5em;
+    padding: .5em;
+
+    &__a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__img{
+        width: mixinfunc.em(33);
+        height: mixinfunc.em(33);
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__users{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__span{
+        font-size: .8em;
+        color: $color-font-pry;
+    }
+
+    &__span--primary{
+        font-weight: 700;
+        color: $color-font-sec;
+    }
+
+    &__icon{
+        width: mixinfunc.em(18.750);
+        height: mixinfunc.em(18.750);
+    }
+}
+
+.profile:hover{
+    background-color: $color-hover-pry;
+}
+
 main {
     min-height: 100vh;
     display: flex;
