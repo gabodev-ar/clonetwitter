@@ -16,13 +16,12 @@
 
 .modal{
     width: mixinfunc.em(600);
-    min-height: 20em;
+    *min-height: 20em;
     max-height: 90vh;
     position: absolute;
     top: 5%;
     border-radius: 1em;
     background-color: #FFFFFF;
-    padding: 0 1em;
     overflow-y: scroll;
 
     &__header{
@@ -33,7 +32,12 @@
         left: 0;
         align-items: center;
         padding: .5em 0;
-        *border: 1px solid red;
+        border: 1px solid red;
+    }
+
+    &__header--active{
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
     }
 
     &__close{
@@ -43,7 +47,8 @@
         display: grid;
         place-items: center;
         cursor: pointer;
-        *border: 1px solid green;
+        margin-left: .5em;
+        border: 1px solid green;
     }
 
     &__close:hover{
@@ -59,12 +64,12 @@
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 9fr;
-        gap: .3em;
     }
 
     &__profile{
-        width: 100%;
-        *border: 1px solid green;
+        width: max-content;
+        margin-left: 1em;
+        border: 1px solid green;
     }
 
     &__img{
@@ -76,7 +81,9 @@
 
     &__wrapper{
         width: 100%;
-        *border: 1px solid green;
+        border-bottom: 1px solid rgba(216, 217, 219, .5);
+        padding: 0 1em .5em 1em;
+        border: 1px solid red;
     }
 
     &__all{
@@ -107,8 +114,8 @@
 
     &__input{
         width: 100%;
-        min-height: 72px;
-        margin: 1em 0;
+        min-height: mixinfunc.em(80);
+        margin: 1em 0 .5em 0;
         font-size: 1.3em;
         font-weight: 400;
         line-height: 1.5em;
@@ -123,4 +130,105 @@
     &__input::-webkit-scrollbar{
         display: none;
     }
+
+    &__span{
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .3em;
+        font-size: .9em;
+        font-weight: 600;
+        color: $color-primary;
+        cursor: pointer;
+        border-radius: 1em;
+        padding: .1em .9em;
+    }
+
+    &__span:hover{
+        background-color: $color-hover-sec;
+    }
+
+    &__world{
+        width: 1.1em;
+        height: 1.1em;
+    }
+
+    &__footer{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    &__box{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: .5em 2em;
+        border: 1px solid blue;
+    }
+
+    &__ul{
+        display: flex;
+        flex-direction: row;
+        gap: .2em;
+        color: $color-primary;
+    }
+
+    &__li{
+        padding: .5em;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &__li:hover{
+        background-color: $color-hover-sec;
+    }
+
+    &__icon{
+        width: 1.2em;
+        height: 1.2em;
+    }
+
+    &__actions{
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+        border: 1px solid red;
+    }
+
+    &__spinner{
+        width: 1.65em;
+        height: 1.65em;
+        border-radius: 50%;
+        border: 2px solid $color-modal-line;
+        margin: 0 .5em;
+    }
+
+    &__addtweet{
+        padding: .3em;
+        border-radius: 50%;
+        border: 1px solid $color-modal-line;
+        cursor: pointer;
+        margin: 0 .5em;
+    }
+
+    &__addtweet:hover{
+        background-color: $color-hover-sec;
+    }
+
+    &__add{
+        width: 1em;
+        height: 1em;
+    }
+
+    &__twettear{
+
+    }
+}
+
+.modal::-webkit-scrollbar{
 }
