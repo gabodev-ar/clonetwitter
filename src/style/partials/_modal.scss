@@ -1,0 +1,126 @@
+@use 'mixinfunc';
+
+.cover{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-cover;
+    z-index: 2;
+}
+
+.modal{
+    width: mixinfunc.em(600);
+    min-height: 20em;
+    max-height: 90vh;
+    position: absolute;
+    top: 5%;
+    border-radius: 1em;
+    background-color: #FFFFFF;
+    padding: 0 1em;
+    overflow-y: scroll;
+
+    &__header{
+        width: 100%;
+        display: flex;
+        position: sticky;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding: .5em 0;
+        *border: 1px solid red;
+    }
+
+    &__close{
+        width: mixinfunc.em(36);
+        height: mixinfunc.em(36);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        *border: 1px solid green;
+    }
+
+    &__close:hover{
+        background-color: $color-hover-pry;
+    }
+
+    &__xmark{
+        width: mixinfunc.em(20);
+        height: mixinfunc.em(20);
+    }
+
+    &__main{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 9fr;
+        gap: .3em;
+    }
+
+    &__profile{
+        width: 100%;
+        *border: 1px solid green;
+    }
+
+    &__img{
+        width: 3.1em;
+        height: 3.1em;
+        border-radius: 50%;
+        margin-top: .2em;
+    }
+
+    &__wrapper{
+        width: 100%;
+        *border: 1px solid green;
+    }
+
+    &__all{
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0 .7em;
+        border-radius: 1em;
+        color: $color-primary;
+        font-size: .9em;
+        font-weight: 600;
+        gap: .5em;
+        cursor: pointer;
+        margin-top: .7em;
+        border: 1px solid $color-modal-line;
+    }
+
+    &__all:hover{
+        background-color: $color-hover-sec;
+    }
+
+    &__arrow{
+        width: 1em;
+        height: 1em;
+    }
+
+    &__input{
+        width: 100%;
+        min-height: 72px;
+        margin: 1em 0;
+        font-size: 1.3em;
+        font-weight: 400;
+        line-height: 1.5em;
+        outline: none;
+        resize: none;
+        border: 1px solid red;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        overflow-y: hidden;
+    }
+
+    &__input::-webkit-scrollbar{
+        display: none;
+    }
+}
