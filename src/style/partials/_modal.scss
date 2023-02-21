@@ -4,25 +4,30 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    display: grid;
+    display: none; 
     place-items: center;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: $color-cover;
-    z-index: 2;
+    z-index: 1;
 }
 
 .modal{
     width: mixinfunc.em(600);
-    *min-height: 20em;
     max-height: 90vh;
+    display: none;
+    flex-direction: column;
     position: absolute;
     top: 5%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     border-radius: 1em;
     background-color: #FFFFFF;
-    overflow-y: scroll;
+    overflow-y: auto;
+    z-index: 2;
 
     &__header{
         width: 100%;
@@ -32,7 +37,6 @@
         left: 0;
         align-items: center;
         padding: .5em 0;
-        border: 1px solid red;
     }
 
     &__header--active{
@@ -48,7 +52,6 @@
         place-items: center;
         cursor: pointer;
         margin-left: .5em;
-        border: 1px solid green;
     }
 
     &__close:hover{
@@ -69,7 +72,6 @@
     &__profile{
         width: max-content;
         margin-left: 1em;
-        border: 1px solid green;
     }
 
     &__img{
@@ -83,7 +85,6 @@
         width: 100%;
         border-bottom: 1px solid rgba(216, 217, 219, .5);
         padding: 0 1em .5em 1em;
-        border: 1px solid red;
     }
 
     &__all{
@@ -121,7 +122,6 @@
         line-height: 1.5em;
         outline: none;
         resize: none;
-        border: 1px solid red;
         white-space: pre-wrap;
         overflow-wrap: break-word;
         overflow-y: hidden;
@@ -161,12 +161,11 @@
     }
 
     &__box{
-        width: 90%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: .5em 2em;
-        border: 1px solid blue;
+        padding: .5em 1em;
+        gap: 4.5em;
     }
 
     &__ul{
@@ -197,19 +196,18 @@
         flex-direction: row;
         align-items: center;
         margin: 0;
-        border: 1px solid red;
     }
 
     &__spinner{
-        width: 1.65em;
-        height: 1.65em;
+        width: 1.5em;
+        height: 1.5em;
         border-radius: 50%;
         border: 2px solid $color-modal-line;
         margin: 0 .5em;
     }
 
     &__addtweet{
-        padding: .3em;
+        padding: .2em;
         border-radius: 50%;
         border: 1px solid $color-modal-line;
         cursor: pointer;
@@ -223,12 +221,28 @@
     &__add{
         width: 1em;
         height: 1em;
+        color: $color-primary;
     }
 
     &__twettear{
+        padding: .5em 1em;
+        color: #FFFFFF;
+        font-weight: 700;
+        border-radius: 1em;
+        margin-left: .5em;
+        background-color: $color-primary;
+        cursor: pointer;
+    }
 
+    &__twettear:hover{
+        background-color: $color-hover-btn;
     }
 }
 
-.modal::-webkit-scrollbar{
+.cover--active{
+    display: grid;
+}
+
+.modal--active{
+    display: flex;
 }

@@ -91,11 +91,9 @@
     margin-top: .5em;
     border-radius: 1.5em;
     
-    &__a{
-        display: flex;
-        justify-content: center;
-        padding: .89em 4.3em;
-        *border: 1px solid red;
+    &__btn{
+        padding: .9em 4.5em;
+        cursor: pointer;
     }
 
     &__label{
