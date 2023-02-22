@@ -198,12 +198,38 @@
         margin: 0;
     }
 
+    &__progresscircle{
+        width: mixinfunc.em(26);
+        height: mixinfunc.em(26);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    &__warning{
+        display: none;
+        position: absolute;
+        font-size: .6em;
+    }
+
     &__spinner{
-        width: 1.5em;
-        height: 1.5em;
-        border-radius: 50%;
-        border: 2px solid $color-modal-line;
-        margin: 0 .5em;
+        width: mixinfunc.em(26);
+        height: mixinfunc.em(26);
+    }
+
+    &__circle{
+        fill: none;
+        stroke-dasharray: 100 100;
+        stroke-width: 2px;
+        stroke: $color-modal-line;
+    }
+
+    &__circle:nth-child(2){
+        stroke-dasharray: 0 100;
+        stroke: $color-primary;
+        transform: rotate(-90deg);
+        transform-origin: 50%;
     }
 
     &__addtweet{
@@ -236,6 +262,11 @@
 
     &__twettear:hover{
         background-color: $color-hover-btn;
+    }
+
+    &__twettear:disabled{
+        cursor: auto;
+        opacity: .5;
     }
 }
 
