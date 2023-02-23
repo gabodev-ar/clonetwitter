@@ -50,29 +50,31 @@ modalCover.addEventListener('click', hiddenModal);
 
 
 //Spinner Function
-
 const updateCircleCheck = ()=>{
 
     let characters = textArea.value.length;
     let pathlength = characters * 100 / 280; 
     modalCircle.style = `stroke-dasharray: ${pathlength} 100;`;
 
-    if(characters > 259){
-        modalCircle.style.stroke = "#f9e793";
-        modalWarning.style.display = "block";
-        modalWarning.innerText = `${280 - characters}`;
-        
+    if (characters > 0) {
+        modalButton.disabled = false;
+    } else {
+        modalButton.disabled = true;
     }
     
-    if(characters > 280){
+    if (characters > 259) {
+        modalCircle.style.stroke = "#f9e793";
+        modalWarning.style.display = "block";
+        modalWarning.style.color = "#616264";
+        modalWarning.innerText = `${280 - characters}`;
+    } else {
+        modalWarning.style.display = "none"
+    }
+    
+    if (characters > 280) {
         modalCircle.style.stroke = "#bc333e";
         modalWarning.style.color = "#bc333e";
-    }
-
-    (characters > 0) ? modalButton.disabled=false : modalButton.disabled=true;
-
-    console.log(characters);
-
+    }  
 }
 
 textArea.addEventListener('input', updateCircleCheck);
