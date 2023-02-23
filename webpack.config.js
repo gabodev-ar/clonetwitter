@@ -7,7 +7,7 @@ module.exports = {
   //Punto de entrada, punto de salida
   entry: './src/app/app.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'deploy'),
     filename: 'app.js'
   },
   mode: "production",
