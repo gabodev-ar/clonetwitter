@@ -78,12 +78,12 @@ li {
 
 /* Configuramos anclas suaves */
 html {
+  font-size: 6.25%;
   scroll-behavior: smooth;
 }
 
 /* Desactivamos estilos por defecto de las principales etiquetas de texto */
 h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
-  font-size: 1em;
   font-weight: inherit;
   font-style: inherit;
   text-decoration: none;
@@ -143,11 +143,8 @@ svg {
 /* Configuramos la tipografía para toda la web */
 body {
   min-height: 100vh;
-  font-size: 100%;
-  font-family: var(--tipo-principal);
+  font-size: 16rem;
   color: var(--negro);
-  /* opcional */
-  line-height: 1.4em;
   /* opcional */
   -webkit-hyphens: auto;
       -ms-hyphens: auto;

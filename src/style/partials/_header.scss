@@ -1,31 +1,29 @@
-@use 'mixinfunc';
 @use 'global';
 
 .header {
     min-height: 100vh;
-    width: mixinfunc.rem(317);
+    width: 317rem;
     position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
     justify-content: flex-end;
     background-color: $color-background;
-    border-right: 1px solid $color-grey;
+    border-right: 1rem solid $color-grey;
+    font-size: 20rem;
     font-family: 'Chirp', sans-serif;
-    font-size: 1.28em;
+    font-weight: 400;
 
     &__wrapper {
         min-height: 100vh;
-        width: mixinfunc.rem(275);
-        padding: 0 .5em 0 .5em;
-        margin-top: .2em;
+        width: 275rem;
+        padding: 0 12rem 0 12rem;
+        margin-top: 2rem;
     }
 
     &__logo {
-        width: mixinfunc.rem(52);
-        height: mixinfunc.rem(52);
+        width: 52rem;
+        height: 52rem;
         display: flex;
-        padding: .55em;
+        padding: 11rem;
         border-radius: 50%;
         cursor: pointer;
     }
@@ -43,6 +41,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
 
     &__ul{
         display: flex;
@@ -56,9 +55,9 @@
         flex-direction: row;
         align-items: center;
         cursor: pointer;
-        border-radius: 1.5em;
-        padding: mixinfunc.rem(12);
-        padding-right: 1.3em;
+        border-radius: 32rem;
+        padding: 12rem;
+        padding-right: 32rem;
     }
 
     &__li:hover{
@@ -66,13 +65,12 @@
     }
 
     &__icon{
-        width: 1.3em;
-        height: 1.3em;
-        margin-right: 1em;
+        width: 26.5rem;
+        height: 26.5rem;
+        margin-right: 20rem;
     }
 
     &__label{
-        display: inline;
         margin: 0;
         color: $color-font-pry;
     }
@@ -86,19 +84,19 @@
 
 .twittear{
     width: max-content;
-    font-size: .85em;
+    font-size: 18rem;
     background-color: $color-primary;
-    margin-top: .5em;
-    border-radius: 1.5em;
+    margin-top: 9rem;
+    border-radius: 32rem;
     
     &__btn{
-        padding: .9em 4.5em;
+        padding: 16rem 78rem;
         cursor: pointer;
     }
 
     &__label{
         color: #FFFFFF;
-        font-weight: 800;
+        font-weight: 600;
     }
 }
 
@@ -108,24 +106,24 @@
 
 .profile{
     width: 100%;
-    margin-top: 1.3em;
-    border-radius: 1.5em;
-    padding: .5em;
+    margin-top: 26rem;
+    border-radius: 32rem;
+    padding: 10rem;
 
     &__a{
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
     }
 
     &__img{
-        width: mixinfunc.em(33);
-        height: mixinfunc.em(33);
+        width: 40rem;
+        height: 40rem;
         border-radius: 50%;
         object-fit: cover;
+        margin-right: 10rem;
     }
 
     &__users{
@@ -134,8 +132,9 @@
     }
 
     &__span{
-        font-size: .8em;
+        font-size: 15rem;
         color: $color-font-pry;
+        margin-right: 32rem;
     }
 
     &__span--primary{
@@ -144,8 +143,8 @@
     }
 
     &__icon{
-        width: mixinfunc.em(18.750);
-        height: mixinfunc.em(18.750);
+        width: 19.5rem;
+        height: 19.5rem;
     }
 }
 

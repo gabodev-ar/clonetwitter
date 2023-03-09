@@ -7,10 +7,10 @@ module.exports = {
   //Punto de entrada, punto de salida
   entry: './src/app/app.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'deploy'),
     filename: 'app.js'
   },
-  mode: "production",
+  mode: 'production',
   //Plugins
   plugins: [
     new HtmlWebpackPlugin({
@@ -21,17 +21,17 @@ module.exports = {
     }),
 
     new MiniCssExtractPlugin({
-      filename: "style.css"
+      filename: 'style.css'
     }),
 
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "src", "assets/img"),
-          to: "assets/img"
-        }
-      ]
-    })
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, 'src', 'assets/img'),
+    //       to: 'assets/img'
+    //     }
+    //   ]
+    // })
   ],
 
   //Configuración de plugins
@@ -54,6 +54,22 @@ module.exports = {
           "sass-loader"
         ]
       },
+      {
+        test: /\.webp$/i,
+        exclude: /node_modules/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[name][ext]'
+        }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        exclude: /node_modules/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext]'
+        }
+      }
     ],
   },
 }

@@ -56,25 +56,36 @@ const updateCircleCheck = ()=>{
     let pathlength = characters * 100 / 280; 
     modalCircle.style = `stroke-dasharray: ${pathlength} 100;`;
 
-    if (characters > 0) {
-        modalButton.disabled = false;
-    } else {
+    //condiciones si c >0, si 280 < c > 259, si c > 280 y else
+
+    if (characters === 0) {
+
+        modalWarning.style.display = "none"
         modalButton.disabled = true;
-    }
-    
-    if (characters > 259) {
-        modalCircle.style.stroke = "#f9e793";
+
+    } else if ( characters > 259 && characters < 281) {
+
         modalWarning.style.display = "block";
+        modalCircle.style.stroke = "#f9e793";
         modalWarning.style.color = "#616264";
         modalWarning.innerText = `${280 - characters}`;
-    } else {
-        modalWarning.style.display = "none"
-    }
+
+    } else if ( characters > 280 ) {
     
-    if (characters > 280) {
+        modalWarning.style.display = "block";
         modalCircle.style.stroke = "#bc333e";
         modalWarning.style.color = "#bc333e";
-    }  
+        modalWarning.innerText = `${280 - characters}`;
+
+        let spanCharacters = '<span style="background-color : red"></span>'
+        textArea.innerHTML =  spanCharacters;
+
+    } else {
+
+        modalWarning.style.display = "none"
+        modalButton.disabled = false;
+
+    }
 }
 
 textArea.addEventListener('input', updateCircleCheck);

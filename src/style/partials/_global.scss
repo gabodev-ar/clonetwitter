@@ -10,3 +10,39 @@
  $color-cover      : rgba(0, 0, 0, 0.4);
  $color-modal      : #4698d0;
  $color-modal-line : #d8d9db;
+
+
+ @font-face {
+   font-family: 'Chirp';
+   src: url('../assets/fonts/Chirp-Regular.woff2') format('woff2');
+   font-weight: 400;
+   font-style: normal;
+ }
+
+ @font-face {
+  font-family: 'Chirp';
+  src: url('../assets/fonts/Chirp-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chirp';
+  src: url('../assets/fonts/Chirp-Heavy.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chirp';
+  src: url('../assets/fonts/Chirp-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('../assets/fonts/Mulish-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
